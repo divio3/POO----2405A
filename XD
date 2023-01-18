@@ -1,54 +1,59 @@
 fun main(){
-    /*POO- Programação Orientada a objetivos - Simular coisas da realidade na programação
-     * 
-     * Objetos - Possui Estados(nome, idade, endereço, altura e etc), comportamentos(andar,correr , dormir , comer
-     * etc)
-     * a POO é dividida
-     * 
-     * classes - são modelos que servem para a construção de objs derivados dele mesmo(Ex Classe pessoa)
-     * as classes recebem atributos
-     * 
-    * 
-     * métodos - será as instrancias da classe, as formas de agir
-     * 
-     * 
-    */
+     
+ 	var dinossauro = Animal("réptil",'M',"Rio Tietê", 
+"Carnívoro", 300, true)
+ 	/*println("Meu bixinho " + dinossauro.especie + " ele é " + dinossauro.dieta + " e ele mora no " + dinossauro.habitat)*/
+    dinossauro.Atacar(false)
+    dinossauro.Voar(false)
     
-   
-    //Estrutura de uma classe
-    // class Nome(){ocorridos de um obj}
-    /*
-    var Ricardo = Pessoa()//instancia um obj
-    	Ricardo.altura = 2.15
-    Ricardo.corDosOlhos = "Verde"
-    Ricardo.peso = 100.0
-    println(Ricardo.altura)//para exibir um atributo em especifico
-    */
-    /*
-  val convidado1 = Pessoa("Claudio",1.79,"castanho",183.0)
-  println(convidado1.peso)
-  val convidado2 = Pessoa("Juliana", 1.5, "azul", 53.5)
-    */
-    
-    var convidado1 = Pessoa("Claudio",1.67,"azul",98.0)
-
-  var convidado2 = Pessoa("sophia", 1.9, "verde", 57.5)
-                          
-var convidado3 = Pessoa("victor", 1.8 ,"negro",13.0)
-  
-  var convidado4 = Pessoa("karol", 1.83, "castanho", 89.5)
-                          
-var convidado5 = Pessoa("ricardo",1.67,"negro",13.4)
- 
-  var convidado6 = Pessoa("cancerbero", 1.5, "azul", 53.5)
-  println("convidado5:" + convidado5. altura)
+       
 }
+/*
 class Pessoa(val nome: String, 
              val altura: Double,
             val corDosOlhos: String,
-            val peso: Double){}
-
+            val peso: Double){}*/
     
+
+       class Animal(val especie: String, val genero: Char, val habitat: String,
+                   val dieta: String, val idade: Int, val voa: Boolean){
+           
+       
+        fun Atacar(bravo: Boolean){
+            if(bravo == true){
+                 println("animal atacando")
+                }
+            else{
+                println("animal de boa, suavao, moh paiz")}
+        }
+       
+            fun Voar(Voar: Boolean){
+        if(Voar == true){
+            println("animal voando")
+           
+        }else{
+            println("animal caminhando")
+        }
+        
+        
+    }
+
+       }
+
+
+	//método - Comportamentos da nossa classe, que os nossos objetos receberão
+	//
+	//Eles são declarados usando funções
+	
+    //exercicio: faça um novo comportamento para o seu animal usando uma nova fun
+    
+    
+    
+   
+
+
+
+
 
 
 
