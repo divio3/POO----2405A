@@ -1,19 +1,22 @@
 fun main(){
-     
+    /* 
  	var dinossauro = Animal("réptil",'M',"Rio Tietê", 
 "Carnívoro", 300, true)
  	/*println("Meu bixinho " + dinossauro.especie + " ele é " + dinossauro.dieta + " e ele mora no " + dinossauro.habitat)*/
     dinossauro.Atacar(false)
     dinossauro.Voar(false)
-    
-       
+    dinossauro.Islas(false)
+       */
+    val contaCorrente = ContaDoBanco(4002, 89922.00, "Safra", 
+                                      "Franco Francisco Aguero")
+    contaCorrente.ConsultarSaldo()
+
 }
-/*
 class Pessoa(val nome: String, 
              val altura: Double,
             val corDosOlhos: String,
-            val peso: Double){}*/
-    
+            val peso: Double){}
+    /*
 
        class Animal(val especie: String, val genero: Char, val habitat: String,
                    val dieta: String, val idade: Int, val voa: Boolean){
@@ -27,7 +30,7 @@ class Pessoa(val nome: String,
                 println("animal de boa, suavao, moh paiz")}
         }
        
-            fun Voar(Voar: Boolean){
+        fun Voar(Voar: Boolean){
         if(Voar == true){
             println("animal voando")
            
@@ -37,7 +40,14 @@ class Pessoa(val nome: String,
         
         
     }
-
+   fun Islas(islas: Boolean){
+                if(islas == true){
+                    println("Islas Malvinas da Argentina")
+                }else{
+                    println("Islas Malvinas Da Inglaterra")
+                }
+            }
+         
        }
 
 
@@ -46,13 +56,30 @@ class Pessoa(val nome: String,
 	//Eles são declarados usando funções
 	
     //exercicio: faça um novo comportamento para o seu animal usando uma nova fun
+    */
+    
+   			    
+class ContaDoBanco(var senha: Int, var saldo: Double,
+                               var banco: String, var dono: String,
+                               ){
+                
+                
+                fun ConsultarSaldo(){
+                    println("O saldo da sua conta é R$$saldo")
+                }
+            }
+                
+            
+
+            
+                      
     
     
     
-   
+    
 
-
-
+    	
+    
 
 
 
