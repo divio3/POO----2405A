@@ -6,9 +6,13 @@ fun main(){
     dinossauro.Atacar(false)
     dinossauro.Voar(false)
     dinossauro.Islas(false)
+    
        */
     val contaCorrente = ContaDoBanco(4002, 89922.00, "Safra", 
                                       "Franco Francisco Aguero")
+    contaCorrente.ConsultarSaldo()
+    contaCorrente.valordeposito(5.00)
+                               
     contaCorrente.ConsultarSaldo()
 
 }
@@ -63,10 +67,30 @@ class ContaDoBanco(var senha: Int, var saldo: Double,
                                var banco: String, var dono: String,
                                ){
                 
-                
-                fun ConsultarSaldo(){
-                    println("O saldo da sua conta é R$$saldo")
+
+                         
+                fun saque(valorsaque : Double){
+                    if(valorsaque >= 0){
+                        println("Não peça coisas impossiveis")
+                     }else if(saldo >= valorsaque){
+                    	saldo -= valorsaque
+                   		println("Saque de R$$valorsaque retire o dinhero")
+                    	}else{
+                    println("Saldo insuficiente")
+                } 
+                   
+                   
+}
+                fun valordeposito(deposito : Double){
+                    	if(deposito <= 0){
+                    		println("impossível depositar")
+                }else{
+                    	println("seu valor de $$deposito foi depositado com sucesso")
+                    		saldo += deposito
                 }
+                   
+         }               
+
             }
                 
             
